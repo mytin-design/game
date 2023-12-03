@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="editable" contenteditable="true">T</div>
+    <div class="fixed">Z</div>
+    <button id="change" onclick="change()">Save</button>
+</body>
+<script>
+    function change() {
+        let ed = document.querySelector('.editable')
+        let fixed = document.querySelector('.fixed')
+
+
+        fixed.innerHTML = ed.innerHTML
+
+    }
+</script>
+</html>

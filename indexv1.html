@@ -1,0 +1,133 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="stylev1.css">
+</head>
+<body>
+    <div class="field">
+        <div class="gs">
+            <div class="gheader">
+                <h3 class="gname">Snake Game</h3>
+            </div>
+            <div class="gbuttons">
+                <button id="file" class="gbtn" onclick="displayFile()">File</button>
+                <button id="edit" class="gbtn" onclick="displayEdits()">Edit</button>
+                <button id="play" class="gbtn" onclick="moveBody()">Play</button>
+                <button id="pause" class="gbtn" onclick="stopBody()">Pause</button>
+                <button id="stop" class="gbtn" onclick="stopBody()">Stop</button>
+                <button id="reset" class="gbtn" onclick="resetGame()">Reset</button>
+                <button id="help" class="gbtn" onclick="displayHelp()">Help</button>
+
+            </div>
+            <div class="filebx" style="display: none;">
+                <ul class="fileOptions">
+                    <li class="fo1 fo"><a href="#" onclick="moveBody()" class="flink">Play</a></li>
+                    <li class="fo2 fo"><a href="#" onclick="stopBody()" class="flink">Pause</a></li>
+                    <li class="fo3 fo"><a href="#" onclick="stopBody()" class="flink">Stop</a></li>
+                    <li class="fo4 fo"><a href="#" class="flink">Preferences</a></li>
+                    <li class="fo5 fo"><a href="#" class="flink">End game</a></li>
+                </ul>
+            </div>
+
+            <div class="editbx" style="display: none;">
+                <ul class="editOptions">
+                    <li class="eo1 eo"><a href="#" onclick="viewControls()" class="elink">Controls</a></li>
+                    <li class="eo2 eo"><a href="#" class="elink" onclick="editControls()">Edit controls</a></li>
+                    <li class="eo3 eo"><a href="#" class="elink">assign</a></li>
+                    <li class="eo4 eo"><a href="#" class="elink">Preferences</a></li>
+                    <li class="eo5 eo"><a href="#" class="elink">Delete actions</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="fieldinner">
+            <!--Snake-->
+            <div id="snakebody" class="snakebody">
+                <div class="snaketail"></div>
+                <div class="snakehead">
+                    <div class="snakeeye"></div>
+                </div>
+            </div>
+
+            <!--Help box-->
+            <div class="hbx">
+                <div class="hder">
+                    <h4 class="hbxtitle">How to play</h4>
+                    <button id="closeHelp" onclick="closeHelp()">&times;</button>
+                </div>
+                <hr color="#eee">
+                <div class="hbody">
+                    <ul class="inst">
+                        <li class="inst1">1. Press play to begin.</li>
+                        <li class="inst2">2. Then press x - left, y - right, z - down and t - up to move the snake.</li>
+                        <li class="inst3">3. The more time you last the higher your score.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Editable CONTROLS-->
+            <div class="cbox" style="display: none;">
+                <div class="cder">
+                    <h4 class="cbxtitle">Tune your controls</h4>
+                    <button id="closeControls" onclick="closeControls()">&times;</button>
+                </div>
+                <hr color="#eee">
+                <div class="cbody">
+                <p class="cdes">Primary</p>
+                    <div class="cbodyinner">
+                        <ul class="controls">
+                            <li class="control1 cobtn">Right</li>
+                            <li class="control2 cobtn">Left</li>
+                            <li class="control3 cobtn">Down</li>
+                            <li class="control3 cobtn">Up</li>
+                        </ul>
+                        <ul class="controls">
+                            <li class="controlx cobtn cotn" onclick="changeX()">R</li>
+                            <li class="controly cobtn cotn" onclick="changeY()">Y</li>
+                            <li class="controlz cobtn cotn" onclick="changeZ()">Z</li>
+                            <li class="controlt cobtn cotn" onclick="changeT()">T</li>
+                        </ul>
+                    </div>
+                <button id="saveControls" class="gbtn" onclick="saveControls()">Save</button>
+                </div>
+            </div>
+
+            <!--Fixed controls-->
+            <div class="cbox fcbx" style="display: none;">
+                <div class="cder">
+                    <h4 class="cbxtitle">Controls</h4>
+                    <button id="closeControls" onclick="closeControls()">&times;</button>
+                </div>
+                <hr color="#eee">
+                <div class="cbody">
+                <p class="cdes">Primary</p>
+                    <div class="cbodyinner">
+                        <ul class="controls">
+                            <li class="control1 cobtn">Right</li>
+                            <li class="control2 cobtn">Left</li>
+                            <li class="control3 cobtn">Down</li>
+                            <li class="control3 cobtn">Up</li>
+                        </ul>
+                        <ul class="controls">
+                            <li id="cX" class="controlX cobtn cotn">X</li>
+                            <li id="cY" class="controlY cobtn cotn">Y</li>
+                            <li id="cZ" class="controlZ cobtn cotn">Z</li>
+                            <li id="cT" class="controlT cobtn cotn">T</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="glay">
+            <button id="xbtn" class="gbtn">x</button>
+                <button id="ybtn" class="gbtn">y</button>
+                <button id="zbtn" class="gbtn">z</button>
+                <button id="tbtn" class="gbtn">t</button>
+        </div>
+    </div>
+</body>
+<script src="scriptv1.js"></script>
+</html>

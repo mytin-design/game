@@ -1,0 +1,280 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    transition: 1.5s ease;  
+   }
+   
+   
+   .field {
+       margin: 1rem auto;
+       width: 70%;
+       border: 1rem solid groove;
+       color: #000;
+       background-color: #eee;
+   }
+   
+   
+   .fieldinner {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       height: 20rem;
+       background-color: #000;
+   }
+   
+   
+   .gs {
+       display: flex;
+       flex-direction: column;
+       gap: .5rem;   
+       padding: .4rem;   
+   
+   }
+   
+   .gbuttons,  .glay {
+       display: flex;
+       align-items: center;
+       justify-content: space-around;
+       width: 40%;
+       padding: .4rem;   
+   }
+   
+   .gbtn {
+          height: 1.5rem;
+          width: 3rem;
+          border-radius: .4rem;
+          background-color: #fff;
+   }
+   
+   
+   .glay {
+       margin: 0 auto;
+       background-color: #999;   
+   }
+   
+   
+   .snakebody {
+       display: flex;
+       justify-content: center;
+       align-items: center;   
+       animation-name: move;
+       animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+       animation-fill-mode: forwards;
+       animation-duration: 10s;
+       animation-iteration-count: 1;
+       animation-direction: normal;
+       animation-play-state: paused;
+   
+   }
+   
+   .play {
+       animation-play-state: running;
+   } 
+   
+   .paused {
+       animation-play-state: paused;
+   }
+   
+   .snaketail {
+       width: 5rem;
+       height: .2rem;
+       background-color: #0f0;
+       border-radius: 1.5rem 0 0 1.5rem;   
+   }
+   
+   .snakehead {
+       display: flex;
+       align-items: center;
+       justify-content: flex-end;
+       height: 1rem;
+       width: 1.5rem;
+       background-color: #0f0;
+       border-radius: 70%;  
+       padding: .4rem;   
+   
+   }
+   
+   .snakeeye {
+       height: .3rem;
+       width: .3rem;
+       background-color: #000;
+       border-radius: 100%;   
+   }
+   
+   
+   .hbx {
+       position: absolute;
+       margin: 3rem auto;
+       display: flex;
+       flex-direction: column;
+       gap: .5rem;   
+       background-color: #fff;
+       border-radius: .2rem;
+       z-index: 10;
+       display: none;
+   } 
+   
+   .hder {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding: .4rem .6rem;       
+   }
+   
+   #closeHelp  {
+       background-color: transparent;
+       color: #000;
+       font-size: 1.5rem;  
+       border: none; 
+   }
+   
+   #closeHelp:hover  {
+          color: red;
+   }
+   
+   
+   /* Controls */
+   
+   .cbox {
+       margin: 0 auto;
+       position: absolute;
+       display: flex;
+       flex-flow: column;
+       gap: 1rem;   
+       background-color: #fff;
+       padding: .5rem;
+       z-index: 40;
+   }
+   
+   .cder {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding: .5rem 1rem .5rem 1rem;
+   }
+   
+   #closeControls {
+       border: none;
+       font-size: 1.5rem;
+       color: #000;
+       background-color: transparent;
+   }
+   
+   #closeControls:hover {
+       color: red;
+   }
+   .cbody {
+       display: flex;
+       flex-direction: column;
+       gap: .5rem;       
+   }
+   
+   .cdes {
+       font-size: 1.3rem;
+   }
+   
+   
+   .cbodyinner {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: .5rem;
+   }
+   
+   .controls {
+       display: flex;
+       flex-flow: column;
+       gap: .5rem;
+   }
+   
+   .cobtn {
+       height: 2rem;
+       width: 15rem;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       color: #fff;
+       background-color: #333;
+   }
+   
+   
+   
+   .cotn {
+       background-color: #555;
+   }
+   
+   
+   .cotn:hover {
+       background-color: #222;
+   }
+   
+   
+   
+   #saveControls {
+       margin: 0 auto;
+       display: none;
+   }
+   
+   
+   .hbody {
+       padding: .4rem;       
+   }
+   
+   .filebx, .editbx {
+       padding: .4rem;
+       background-color: #fff;
+       color: #000;    
+       border-radius: .2rem;   
+       width: fit-content;
+       position: absolute;
+       z-index: 15;
+       box-shadow: 0 .6rem .6rem #555;
+   }
+   
+   .filebx {
+       top: 13%;
+       left: 13%;   
+   }
+   
+   
+   .editbx {
+       top: 13%;
+       left: 20%;   
+   }
+   .fo,  .eo  {
+       list-style-type: none;
+       color: #000;   
+   }
+   
+   
+   .flink, .elink {
+       color: #000;   
+   }
+   .reset {
+       animation-name: reset;   
+   }
+   
+   @keyframes move {
+       0% {
+           margin-left: 10%;
+       } 
+   
+       100% {
+           margin-left: 88%;
+       }
+   }
+   
+   @keyframes reset  {
+       0% {
+           margin-left: 10%;
+       }   
+   }
+   
+   
+   {
+       
+   }
+   p
+   
+   =
